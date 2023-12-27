@@ -5,6 +5,7 @@
 
 # appsettings
 appsettings.development.json
+server.sln
 
 # User-specific files
 *.rsuser

@@ -5,4 +5,4 @@ services:
     env_file:
       - art_site-env
     ports:
-      - "7045:80"
+      - "7046:80"

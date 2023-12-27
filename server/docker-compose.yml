@@ -1,7 +1,7 @@
 version: '3'
 services:
   app:
-    image: your-dockerhub-username/art_site:latest
+    image: strangkolby/art_site:latest
     env_file:
       - art_site-env
     ports:

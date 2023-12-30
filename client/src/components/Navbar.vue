@@ -1,9 +1,10 @@
 <template>
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark px-3">
-    <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
-      <p>Home</p>
+  <div class="align-items-center px-3">
+
+    <router-link class="fs-1 text-white" :to="{ name: 'Home' }">
+      <p>Gia Strang</p>
     </router-link>
-  </nav>
+  </div>
 </template>
 
 <script>

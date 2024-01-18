@@ -2,7 +2,7 @@
   <header>
     <Navbar />
   </header>
-  <main class="text-white">
+  <main>
     <router-view />
   </main>
 </template>

@@ -6,6 +6,10 @@ body {
   overscroll-behavior: none;
 }
 
+p {
+  font-family: 'Montserrat', sans-serif;
+}
+
 #app {
   display: flex;
   flex-direction: column;
@@ -19,5 +23,25 @@ main {
 
 a {
   text-decoration: none;
+  color: #1e12a4 !important;
 }
 
+.row {
+  padding: 3em 10em 3em 10em;
+}
+
+.logo {
+  width: 7em;
+  height: 7em;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+.mvh-75 {
+  max-height: 75vh;
+}
+
+.mvh-100 {
+  max-height: 100vh;
+}

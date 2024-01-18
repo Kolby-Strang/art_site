@@ -1,9 +1,16 @@
 <template>
-  <div class="align-items-center px-3">
-
-    <router-link class="fs-1 text-white" :to="{ name: 'Home' }">
-      <p>Gia Strang</p>
-    </router-link>
+  <div class="d-flex flex-column justify-content-center align-items-center px-3">
+    <img class="logo my-3" src="../assets/img/Gia.jpg" alt="Photo of Gia">
+    <div class="py-3">
+      <p class="fw-bold text-secondary fs-1">GIA FULLERTON STRANG</p>
+    </div>
+    <nav class="d-flex text-secondary">
+      <a href="#/" class="nav-link">Home</a>
+      <a href="#/larger-sculptures" class="nav-link">Larger Sculptures</a>
+      <a href="#/smaller-sculptures" class="nav-link">Smaller Sculptures</a>
+      <a href="#/about" class="nav-link">About Me</a>
+      <a href="#/artist-statement" class="nav-link">Artist Statement</a>
+    </nav>
   </div>
 </template>
 
@@ -34,8 +41,19 @@ export default {
 </script>
 
 <style scoped>
+a {
+  transition: ease-in-out .2s;
+  padding-left: .8em;
+  padding-right: .8em;
+  height: max-content;
+}
+
 a:hover {
-  text-decoration: none;
+  font-size: 13pt;
+}
+
+a:not(:last-child) {
+  border-right: solid 1px var(--bs-secondary);
 }
 
 .nav-link {

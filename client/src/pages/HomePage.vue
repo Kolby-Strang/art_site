@@ -1,7 +1,21 @@
 <template>
   <div class="container-fluid">
-    <div class="row">
-      <p class="text-white">UNDER DEVELOPMENT</p>
+    <div id="hero" class="row px-0 pt-0">
+      <div class="col-12 px-0">
+        <img class="hero-img" src="../assets/img/Wings-Gia.jpg" alt="Gia Standing within wings made of knives">
+      </div>
+    </div>
+    <div class="row py-5">
+      <div class="col-12 col-md-6">
+        <p class="fs-1">Hi, I'm Gia</p>
+        <p class="fs-5">I'm a Sculptor based in Boise, Idaho</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident dolores voluptas exercitationem repudiandae
+          inventore cumque fugiat! Quaerat aspernatur molestias culpa omnis quae corporis incidunt consequatur laborum
+          enim, voluptatem expedita repellendus.</p>
+      </div>
+      <div class="col-12 col-md-6 d-flex justify-content-center">
+        <img class="img-fluid mvh-75" src="../assets/img/Gia.jpg" alt="A photo of Gia">
+      </div>
     </div>
   </div>
 </template>
@@ -20,4 +34,11 @@ export default {
 }
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.hero-img {
+  aspect-ratio: 16/7;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+</style>

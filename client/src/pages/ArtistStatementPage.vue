@@ -1,8 +1,5 @@
 <template>
-    <div class="component">
-
-
-    </div>
+    <p class="fs-1">Artist Statement</p>
 </template>
 
 

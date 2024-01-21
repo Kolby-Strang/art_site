@@ -1,5 +1,5 @@
 <template>
-  <p class="fs-1">Admin</p>
+  <p class="fs-1">About</p>
 </template>
 
 <script>

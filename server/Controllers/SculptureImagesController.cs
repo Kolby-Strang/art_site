@@ -1,6 +1,6 @@
 namespace art_site.Controllers;
 
-public class SculptureImagesController
+public class SculptureImagesController : ControllerBase
 {
     private readonly SculptureImagesService _sculptureImagesService;
 

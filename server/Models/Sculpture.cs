@@ -9,4 +9,5 @@ public class Sculpture
     public string Description { get; set; }
     public int Price { get; set; }
     public bool IsLarge { get; set; }
+    public List<string> Images { get; set; }
 }

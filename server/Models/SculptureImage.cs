@@ -1,6 +1,6 @@
 namespace art_site.Models;
 
-public class SculpturePicture
+public class SculptureImage
 {
     public int Id { get; set; }
     public int SculptureId { get; set; }

@@ -1,6 +1,7 @@
 <template>
   <div class="d-flex flex-column justify-content-center align-items-center px-3">
-    <img class="logo my-3" src="../assets/img/Gia.jpg" alt="Photo of Gia">
+    <img class="logo my-3" src="https://yzcvxjdmcmvriilyesrf.supabase.co/storage/v1/object/public/images/Gia"
+      alt="Photo of Gia">
     <div class="py-3">
       <p class="fw-bold text-secondary fs-1">GIA FULLERTON STRANG</p>
     </div>

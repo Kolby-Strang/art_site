@@ -2,7 +2,8 @@
   <div class="container-fluid">
     <div id="hero" class="row px-0 pt-0">
       <div class="col-12 px-0">
-        <img class="hero-img" src="../assets/img/Wings-Gia.jpg" alt="Gia Standing within wings made of knives">
+        <img class="hero-img" src="https://yzcvxjdmcmvriilyesrf.supabase.co/storage/v1/object/public/images/Wings-Gia.jpg"
+          alt="Gia Standing within wings made of knives">
       </div>
     </div>
     <div class="row py-5">
@@ -14,7 +15,8 @@
           enim, voluptatem expedita repellendus.</p>
       </div>
       <div class="col-12 col-md-6 d-flex justify-content-center">
-        <img class="img-fluid mvh-75" src="../assets/img/Gia.jpg" alt="A photo of Gia">
+        <img class="img-fluid mvh-75" src="https://yzcvxjdmcmvriilyesrf.supabase.co/storage/v1/object/public/images/Gia"
+          alt="A photo of Gia">
       </div>
     </div>
   </div>

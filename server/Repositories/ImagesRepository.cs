@@ -1,3 +1,4 @@
+
 namespace art_site.Repositories;
 
 public class ImagesRepository
@@ -7,5 +8,10 @@ public class ImagesRepository
     public ImagesRepository(IDbConnection db)
     {
         _db = db;
+    }
+
+    internal List<Image> GetImagesBySculptureId(int id)
+    {
+        throw new NotImplementedException();
     }
 }

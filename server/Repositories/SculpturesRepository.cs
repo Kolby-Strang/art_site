@@ -1,6 +1,7 @@
 
 
 
+
 namespace art_site.Repositories;
 
 public class SculpturesRepository
@@ -45,6 +46,16 @@ public class SculpturesRepository
         WHERE id = LAST_INSERT_ID()
         ;";
         Sculpture sculpture = _db.Query<Sculpture>(sql, sculptureData).FirstOrDefault();
+        return sculpture;
+    }
+
+    internal Sculpture GetSculptureById(int id)
+    {
+        string sql = @"
+        SELECT * FROM sculptures
+        WHERE id = @Id
+        ;";
+        Sculpture sculpture = _db.Query<Sculpture>(sql, new { id }).FirstOrDefault();
         return sculpture;
     }
 }

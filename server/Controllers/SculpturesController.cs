@@ -4,13 +4,15 @@ namespace art_site.Controllers;
 [Route("api/[controller]")]
 public class SculpturesController : ControllerBase
 {
+    private readonly ImagesService _imagesService;
     private readonly SculpturesService _sculpturesService;
     private readonly Auth0Provider _a0;
 
-    public SculpturesController(SculpturesService sculpturesService, Auth0Provider a0)
+    public SculpturesController(SculpturesService sculpturesService, Auth0Provider a0, ImagesService imagesService)
     {
         _sculpturesService = sculpturesService;
         _a0 = a0;
+        _imagesService = imagesService;
     }
 
     [HttpGet("small")]
@@ -40,10 +42,18 @@ public class SculpturesController : ControllerBase
             return BadRequest(err.Message);
         }
     }
-    [HttpGet("{sculptureId}")]
-    public ActionResult<Sculpture> GetSculptureById(int sculptureId)
+    [HttpGet("{id}")]
+    public ActionResult<Sculpture> GetSculptureById(int id)
     {
-        throw new Exception();
+        try
+        {
+            Sculpture sculpture = _sculpturesService.GetSculptureById(id);
+            return sculpture;
+        }
+        catch (Exception err)
+        {
+            return BadRequest(err.Message);
+        }
     }
     [HttpPost]
     [Authorize]
@@ -55,6 +65,19 @@ public class SculpturesController : ControllerBase
             string userId = user.Id;
             Sculpture sculpture = _sculpturesService.CreateSculpture(sculptureData, userId);
             return Ok(sculpture);
+        }
+        catch (Exception err)
+        {
+            return BadRequest(err.Message);
+        }
+    }
+    [HttpGet("{id}/images")]
+    public ActionResult<List<Image>> GetImagesBySculptureId(int id)
+    {
+        try
+        {
+            List<Image> images = _imagesService.GetImagesBySculptureId(id);
+            return images;
         }
         catch (Exception err)
         {

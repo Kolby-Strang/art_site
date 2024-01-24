@@ -35,4 +35,10 @@ public class SculpturesService
             throw new Exception("You are not allowed to post data!");
         }
     }
+
+    internal Sculpture GetSculptureById(int id)
+    {
+        Sculpture sculpture = _repo.GetSculptureById(id);
+        return sculpture;
+    }
 }

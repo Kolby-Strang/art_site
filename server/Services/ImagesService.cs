@@ -1,3 +1,4 @@
+
 namespace art_site.Services;
 
 public class ImagesService
@@ -7,5 +8,11 @@ public class ImagesService
     public ImagesService(ImagesRepository repo)
     {
         _repo = repo;
+    }
+
+    internal List<Image> GetImagesBySculptureId(int id)
+    {
+        List<Image> images = _repo.GetImagesBySculptureId(id);
+        return images;
     }
 }

@@ -12,6 +12,11 @@ public class ImagesRepository
 
     internal List<Image> GetImagesBySculptureId(int id)
     {
-        throw new NotImplementedException();
+        string sql = @"
+        SELECT * FROM images
+        WHERE sculptureId = @Id
+        ;";
+        List<Image> images = _db.Query<Image>(sql, new { id }).ToList();
+        return images;
     }
 }

@@ -84,4 +84,21 @@ public class SculpturesController : ControllerBase
             return BadRequest(err.Message);
         }
     }
+    [HttpPost("{id}/images")]
+    [Authorize]
+    public async Task<ActionResult<string>> CreateImage([FromBody] Image imgData, int id)
+    {
+        try
+        {
+            Account user = await _a0.GetUserInfoAsync<Account>(HttpContext);
+            string userId = user.Id;
+            imgData.sculptureId = id;
+            string message = _imagesService.CreateImage(imgData, userId);
+            return Ok(message);
+        }
+        catch (Exception err)
+        {
+            return BadRequest(err.Message);
+        }
+    }
 }

@@ -27,3 +27,5 @@ VALUES (
 SELECT sculptures.*, images.*
 FROM sculptures
     JOIN images ON images.sculptureId = sculptures.id;
+
+DELETE FROM images WHERE id = 3;

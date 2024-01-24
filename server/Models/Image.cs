@@ -6,5 +6,5 @@ public class Image
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
     public string ImageUrl { get; set; }
-    public int sculptureId { get; set; }
+    public int? SculptureId { get; set; }
 }

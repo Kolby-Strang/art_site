@@ -24,16 +24,9 @@ public class SculpturesService
 
     internal Sculpture CreateSculpture(Sculpture sculptureData, string userId)
     {
-        RestrictAdminOnly(userId);
+        UtilsService.RestrictAdminOnly(userId);
         Sculpture sculpture = _repo.CreateSculpture(sculptureData);
         return sculpture;
-    }
-    private static void RestrictAdminOnly(string userId)
-    {
-        if (userId != "65330f5800fc89b954fa12ed")
-        {
-            throw new Exception("You are not allowed to post data!");
-        }
     }
 
     internal Sculpture GetSculptureById(int id)

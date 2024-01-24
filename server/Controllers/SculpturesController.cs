@@ -86,15 +86,15 @@ public class SculpturesController : ControllerBase
     }
     [HttpPost("{id}/images")]
     [Authorize]
-    public async Task<ActionResult<string>> CreateImage([FromBody] Image imgData, int id)
+    public async Task<ActionResult<Image>> CreateImage([FromBody] Image imgData, int id)
     {
         try
         {
             Account user = await _a0.GetUserInfoAsync<Account>(HttpContext);
             string userId = user.Id;
-            imgData.sculptureId = id;
-            string message = _imagesService.CreateImage(imgData, userId);
-            return Ok(message);
+            imgData.SculptureId = id;
+            Image image = _imagesService.CreateImage(imgData, userId);
+            return Ok(image);
         }
         catch (Exception err)
         {

@@ -39,6 +39,8 @@ public class Startup
 
     services.AddScoped<ImagesRepository>();
     services.AddScoped<ImagesService>();
+
+    services.AddScoped<UtilsService>();
   }
 
   private void ConfigureCors(IServiceCollection services)

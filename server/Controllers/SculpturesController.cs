@@ -101,4 +101,36 @@ public class SculpturesController : ControllerBase
             return BadRequest(err.Message);
         }
     }
+    [HttpPut("{id}")]
+    [Authorize]
+    public async Task<ActionResult<Sculpture>> EditSculpture([FromBody] Sculpture sculptureData, int id)
+    {
+        try
+        {
+            Account user = await _a0.GetUserInfoAsync<Account>(HttpContext);
+            string userId = user.Id;
+            Sculpture sculpture = _sculpturesService.EditSculpture(id, sculptureData, userId);
+            return Ok(sculpture);
+        }
+        catch (Exception err)
+        {
+            return BadRequest(err.Message);
+        }
+    }
+    [HttpDelete("{id}")]
+    [Authorize]
+    public async Task<ActionResult<string>> DestroySculptureById(int id)
+    {
+        try
+        {
+            Account user = await _a0.GetUserInfoAsync<Account>(HttpContext);
+            string userId = user.Id;
+            string message = _sculpturesService.DestroySculptureById(id, userId);
+            return Ok(message);
+        }
+        catch (Exception err)
+        {
+            return BadRequest(err.Message);
+        }
+    }
 }

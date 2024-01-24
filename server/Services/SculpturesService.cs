@@ -1,5 +1,7 @@
 
 
+
+
 namespace art_site.Services;
 
 public class SculpturesService
@@ -35,5 +37,27 @@ public class SculpturesService
         return sculpture;
     }
 
+    internal Sculpture EditSculpture(int id, Sculpture sculptureData, string userId)
+    {
+        UtilsService.RestrictAdminOnly(userId);
+        Sculpture sculptureToUpdate = GetSculptureById(id);
 
+        sculptureToUpdate.Year = sculptureData.Year ?? sculptureToUpdate.Year;
+        sculptureToUpdate.IsLarge = sculptureData.IsLarge ?? sculptureToUpdate.IsLarge;
+        sculptureToUpdate.Price = sculptureData.Price ?? sculptureToUpdate.Price;
+        sculptureToUpdate.CoverImg = sculptureData.CoverImg ?? sculptureToUpdate.CoverImg;
+        sculptureToUpdate.Description = sculptureData.Description ?? sculptureToUpdate.Description;
+        sculptureToUpdate.Name = sculptureData.Name ?? sculptureToUpdate.Name;
+
+        Sculpture sculpture = _repo.EditSculpture(sculptureToUpdate);
+        return sculpture;
+    }
+
+    internal string DestroySculptureById(int id, string userId)
+    {
+        UtilsService.RestrictAdminOnly(userId);
+        GetSculptureById(id);
+        _repo.DestroySculptureById(id);
+        return "Sculpture Destroyed";
+    }
 }

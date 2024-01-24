@@ -2,6 +2,8 @@
 
 
 
+
+
 namespace art_site.Repositories;
 
 public class SculpturesRepository
@@ -57,5 +59,34 @@ public class SculpturesRepository
         ;";
         Sculpture sculpture = _db.Query<Sculpture>(sql, new { id }).FirstOrDefault();
         return sculpture;
+    }
+
+    internal Sculpture EditSculpture(Sculpture sculptureData)
+    {
+        string sql = @"
+        UPDATE sculptures
+        SET
+        year = @Year,
+        isLarge = @IsLarge,
+        price = @Price,
+        coverImg = @CoverImg,
+        description = @Description,
+        name = @Name
+        WHERE id = @Id;
+
+        SELECT * FROM sculptures
+        WHERE id = @Id
+        ;";
+        Sculpture sculpture = _db.Query<Sculpture>(sql, sculptureData).FirstOrDefault();
+        return sculpture;
+    }
+
+    internal void DestroySculptureById(int id)
+    {
+        string sql = @"
+        DELETE FROM sculptures
+        WHERE id = @Id;
+        ;";
+        _db.Execute(sql, new { id });
     }
 }

@@ -27,8 +27,7 @@ a {
 }
 
 .row {
-  padding-left: 30em;
-  padding-right: 30em;
+  padding: 3em 30em 3em 30em
 }
 
 @media (max-width: 1800px) {
@@ -47,8 +46,7 @@ a {
 
 @media (max-width: 1400px) {
   .row {
-    padding-left: 10em;
-    padding-right: 10em;
+    padding: 1em 10em 1em 10em;
   }
 }
 
@@ -84,4 +82,8 @@ a {
 
 .object-cover {
   object-fit: cover;
+}
+
+.bg-grey {
+  background-color: #dddddd;
 }

@@ -1,8 +1,8 @@
 <template>
   <div class="position-relative d-flex flex-column justify-content-center align-items-center px-3">
-    <button class="btn btn-secondary nav-toggle d-block d-md-none" type="button" data-bs-toggle="offcanvas"
+    <button class="btn nav-toggle d-block d-md-none" type="button" data-bs-toggle="offcanvas"
       data-bs-target="#navOffCanvas" aria-controls="navOffCanvas">
-      <i class="fs-5 mdi mdi-menu"></i>
+      <i class="fs-1 mdi mdi-menu"></i>
     </button>
     <img class="logo my-3" src="https://yzcvxjdmcmvriilyesrf.supabase.co/storage/v1/object/public/images/Gia"
       alt="Photo of Gia">

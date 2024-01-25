@@ -42,4 +42,8 @@ a {
 a:not(:last-child) {
     border-bottom: solid 1px var(--bs-secondary);
 }
+
+.nav-link {
+    text-transform: uppercase;
+}
 </style>

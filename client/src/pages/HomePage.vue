@@ -1,12 +1,12 @@
 <template>
   <div class="container-fluid">
-    <div id="hero" class="row px-0 pt-5">
+    <div id="hero" class="row px-0 py-0">
       <div class="col-12 px-0">
         <img class="hero-img" src="https://yzcvxjdmcmvriilyesrf.supabase.co/storage/v1/object/public/images/Wings-Gia.jpg"
           alt="Gia Standing within wings made of knives">
       </div>
     </div>
-    <div class="row py-5">
+    <div class="row">
       <div class="col-12 col-md-6">
         <p class="fs-1">Hi, I'm Gia</p>
         <p class="fs-5">I'm a Sculptor based in Boise, Idaho</p>
@@ -18,6 +18,9 @@
         <img class="img-fluid object-cover"
           src="https://yzcvxjdmcmvriilyesrf.supabase.co/storage/v1/object/public/images/Gia" alt="A photo of Gia">
       </div>
+    </div>
+    <div class="row bg-grey">
+
     </div>
   </div>
 </template>

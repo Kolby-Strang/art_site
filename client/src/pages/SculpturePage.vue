@@ -5,7 +5,7 @@
                 <p class="fs-1 text-center">{{ sculpture.name }}</p>
                 <div v-if="images.length > 0" class="position-relative">
                     <div v-for="(image, index) in images" :key="image.id">
-                        <img v-if="index == currentImgIndex" class="mvh-100 m-100 rounded" :src="image.imageUrl"
+                        <img v-if="index == currentImgIndex" class="mvh-100 w-100 rounded" :src="image.imageUrl"
                             :alt="`Picture of ${sculpture.name}`">
                     </div>
                     <div v-if="images.length > 1" class="scroll-container fs-1 text-shadow">

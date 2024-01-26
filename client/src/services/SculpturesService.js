@@ -13,6 +13,10 @@ class SculpturesService {
         const res = await api.get('api/sculptures')
         return res.data.map((pojo) => new Sculpture(pojo))
     }
+    async getSculptureById(id) {
+        const res = await api.get(`api/sculptures/${id}`)
+        return new Sculpture(res.data)
+    }
 }
 
 export const sculpturesService = new SculpturesService()

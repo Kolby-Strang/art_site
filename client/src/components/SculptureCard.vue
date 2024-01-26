@@ -1,6 +1,6 @@
 <template>
     <div class="container-fluid border-secondary px-0">
-        <router-link :to="'sculpture/' + sculpture.id" class="fw-bold text-shadow text-white">
+        <router-link :to="`sculpture/${sculpture.id}`" class="fw-bold text-shadow text-white">
             <img class="aspect-1-1 img-fluid fit-cover rounded" :src="sculpture.coverImg" alt="">
             <p class="cover-title mb-0 fs-4">{{ sculpture.name }}</p>
             <p class="cover-year mb-0">{{ sculpture.year }}</p>

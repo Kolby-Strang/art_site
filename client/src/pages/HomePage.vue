@@ -11,9 +11,18 @@
       <div class="col-12 col-md-6">
         <p class="fs-1">Hi, I'm Gia</p>
         <p class="fs-5">I'm a Sculptor based in Boise, Idaho</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident dolores voluptas exercitationem repudiandae
-          inventore cumque fugiat! Quaerat aspernatur molestias culpa omnis quae corporis incidunt consequatur laborum
-          enim, voluptatem expedita repellendus.</p>
+
+        <p>In 2018, after a career in the Air Force, raising her three children, and following her husband's Navy career,
+          Gia and her family settled in Boise. Finally carving out some time for herself, Gia went back to school to
+          pursue a second degree in visual arts with a focus in sculpture. She graduated from Boise State in December of
+          2021 with a Bachelor of Fine Arts and opened a studio in her back yard.
+        </p>
+        <p>
+          Choosing to work mostly in reclaimed steel, Gia's raw materials are often flawed, imperfect, or damaged. Rescued
+          from the salvage yard, or even her own scrap bin, the steel forms undergo a metamorphosis to live another life
+          very different from their original purpose.
+        </p>
+
       </div>
       <div class="col-12 col-md-6 d-flex justify-content-center">
         <img class="img-fluid object-cover rounded"

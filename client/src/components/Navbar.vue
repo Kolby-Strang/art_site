@@ -14,6 +14,7 @@
       <a href="#/sculptures" class="nav-link">Sculptures</a>
       <a href="#/about" class="nav-link">About Me</a>
       <a href="#/artist-statement" class="nav-link">Artist Statement</a>
+      <a href="#/contact" class="nav-link">Contact Me</a>
     </nav>
   </div>
 </template>

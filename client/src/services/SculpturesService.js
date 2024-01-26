@@ -9,6 +9,14 @@ class SculpturesService {
         const sculptures = res.data.sort((a, b) => b.id - a.id)
         return sculptures[0]
     }
+    async getAllSculptures() {
+        const res = await api.get('api/sculptures')
+        return res.data.map((pojo) => new Sculpture(pojo))
+    }
+    async getSculptureById(id) {
+        const res = await api.get(`api/sculptures/${id}`)
+        return new Sculpture(res.data)
+    }
 }
 
 export const sculpturesService = new SculpturesService()

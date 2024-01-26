@@ -33,7 +33,10 @@
       <p class="fs-1">Check out my newest sculpture!</p>
       <div class="col-12 col-md-6 text-center">
         <p class="fs-2 text-secondary mb-0">{{ newestSculpture.name }}</p>
-        <img class="img-fluid rounded" :src="newestSculpture.coverImg" :alt="'Photo of ' + newestSculpture.name">
+        <router-link :to="`sculpture/${newestSculpture.id}`">
+          <img class="img-fluid rounded selectable" :src="newestSculpture.coverImg"
+            :alt="'Photo of ' + newestSculpture.name">
+        </router-link>
       </div>
       <div class="col-12 col-md-6">
         <p class="fs-5">{{ newestSculpture.description }}</p>
@@ -60,8 +63,8 @@ export default {
       }
     }
     // LIFECYCLE
-    onMounted(async () => {
-      await getNewestSculpture()
+    onMounted(() => {
+      getNewestSculpture()
     })
     return {
       newestSculpture

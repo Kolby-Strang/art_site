@@ -23,19 +23,19 @@ const routes = [
     beforeEnter: authGuard
   },
   {
-    path: '/larger-sculptures',
-    name: 'LargerSculptures',
-    component: loadPage('LargerSculpturesPage')
-  },
-  {
-    path: '/smaller-sculptures',
-    name: 'SmallerSculptures',
-    component: loadPage('SmallerSculpturesPage')
+    path: '/sculptures',
+    name: 'Sculptures',
+    component: loadPage('SculpturesPage')
   },
   {
     path: '/artist-statement',
     name: 'ArtistStatement',
     component: loadPage('ArtistStatementPage')
+  },
+  {
+    path: '/sculpture/:id',
+    name: 'Sculpture',
+    component: loadPage('SculpturePage')
   }
 ]
 

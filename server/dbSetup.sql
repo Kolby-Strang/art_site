@@ -21,7 +21,7 @@ VALUES (
 INSERT INTO
     images (imageUrl, sculptureId)
 VALUES (
-        "https://yzcvxjdmcmvriilyesrf.supabase.co/storage/v1/object/public/images/the-sound-of-touch/0", 2
+        "https://yzcvxjdmcmvriilyesrf.supabase.co/storage/v1/object/public/images/chaos-contained/1", 6
     );
 
 SELECT sculptures.*, images.*
@@ -29,3 +29,5 @@ FROM sculptures
     JOIN images ON images.sculptureId = sculptures.id;
 
 DELETE FROM images WHERE id = 3;
+
+ALTER TABLE sculptures ADD COLUMN dimensions varchar(20)

@@ -5,13 +5,17 @@
                 <p class="fs-1 text-center">{{ sculpture.name }}</p>
                 <div v-if="images.length > 0" class="position-relative">
                     <div v-for="(image, index) in images" :key="image.id">
-                        <img v-if="index == currentImgIndex" class="mvh-100 w-100 rounded" :src="image.imageUrl"
+                        <img :class="index == currentImgIndex ? 'd-block' : 'hidden'"
+                            class="fit-contain mvh-100 w-100 rounded" :src="image.imageUrl"
                             :alt="`Picture of ${sculpture.name}`">
                     </div>
                     <div v-if="images.length > 1" class="scroll-container fs-1 text-shadow">
-                        <div @click="scrollImg(-1)" class="selectable justify-content-start">&lt;
+                        <div @click="scrollImg(-1)" role="button" class="justify-content-start">
+                            <i class="mdi mdi-hand-pointing-left"></i>
                         </div>
-                        <div @click="scrollImg(1)" class="selectable justify-content-end">></div>
+                        <div @click="scrollImg(1)" role="button" class="justify-content-end">
+                            <i class="mdi mdi-hand-pointing-right"></i>
+                        </div>
                     </div>
                 </div>
             </div>

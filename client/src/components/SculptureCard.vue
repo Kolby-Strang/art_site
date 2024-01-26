@@ -1,9 +1,11 @@
 <template>
-    <div class="container-fluid border-secondary px-0">
-        <router-link :to="`sculpture/${sculpture.id}`" class="fw-bold text-shadow text-white">
-            <img class="aspect-1-1 img-fluid fit-cover rounded" :src="sculpture.coverImg" alt="">
-            <p class="cover-title mb-0 fs-4">{{ sculpture.name }}</p>
-            <p class="cover-year mb-0">{{ sculpture.year }}</p>
+    <div class="container-fluid border-secondary px-0 position-relative">
+        <router-link :to="`sculpture/${sculpture.id}`" class="h-100 hover">
+            <img class="aspect-1-1 img-fluid fit-cover rounded" :src="sculpture.coverImg" :alt="sculpture.name">
+            <div class="fw-bold text-shadow text-white cover">
+                <p class="reveal cover-title mb-0 fs-4 w-75">{{ sculpture.name }}</p>
+                <p class="reveal cover-year mb-0">{{ sculpture.year }}</p>
+            </div>
         </router-link>
     </div>
 </template>
@@ -27,19 +29,27 @@ export default {
 .container-fluid {
     border-radius: 6px;
     border: solid .5px;
-    position: relative;
 }
 
-.cover-title {
+.cover {
+    display: flex;
     position: absolute;
-    bottom: .5rem;
-    left: .5rem;
-    max-width: 70%;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    align-items: end;
+    justify-content: space-between;
+    padding: 0 .5em .25em .5em;
 }
 
-.cover-year {
-    position: absolute;
-    bottom: .5rem;
-    right: .5rem;
+.reveal {
+    transition: ease-in-out .2s;
+    opacity: 0;
+}
+
+.hover:hover {
+    .reveal {
+        opacity: 1;
+    }
 }
 </style>

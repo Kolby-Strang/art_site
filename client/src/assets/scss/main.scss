@@ -75,6 +75,10 @@ a {
   font-size: 40pt;
 }
 
+.fs-7 {
+  font-size: 8pt;
+}
+
 .mvh-75 {
   max-height: 75vh;
 }
@@ -105,4 +109,8 @@ a {
 
 .fit-cover {
   object-fit: cover;
+}
+
+.ease {
+  transition: ease-in-out .5s;
 }

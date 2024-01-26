@@ -21,7 +21,7 @@ VALUES (
 INSERT INTO
     images (imageUrl, sculptureId)
 VALUES (
-        "https://yzcvxjdmcmvriilyesrf.supabase.co/storage/v1/object/public/images/the-sound-of-touch/0", 2
+        "https://yzcvxjdmcmvriilyesrf.supabase.co/storage/v1/object/public/images/chaos-contained/1", 6
     );
 
 SELECT sculptures.*, images.*

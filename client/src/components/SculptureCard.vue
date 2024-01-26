@@ -27,7 +27,6 @@ export default {
 .container-fluid {
     border-radius: 6px;
     border: solid .5px;
-    position: relative;
 }
 
 .cover-title {

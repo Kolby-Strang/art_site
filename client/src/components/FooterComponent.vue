@@ -7,7 +7,11 @@
             </div>
             <div class="col-12 col-md-4">
                 <p class="fs-4 text-center underline">Social Media</p>
-                <i class="mdi mdi-instagram"></i>
+                <button class="btn fs-2">
+                    <a href="https://www.instagram.com/giazilla/" target="_blank">
+                        <i class="mdi mdi-instagram"></i>
+                    </a>
+                </button>
             </div>
             <div class="col-12 col-md-4">
                 <p class="fs-4 text-center underline">Other</p>
@@ -26,4 +30,8 @@ export default {
 </script>
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.mdi-instagram {
+    color: #e6683c;
+}
+</style>

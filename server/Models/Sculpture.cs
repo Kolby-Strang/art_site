@@ -11,4 +11,5 @@ public class Sculpture
     public int? Price { get; set; }
     public bool? IsLarge { get; set; }
     public string CoverImg { get; set; }
+    public string Dimensions { get; set; }
 }

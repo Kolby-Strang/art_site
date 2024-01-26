@@ -43,6 +43,7 @@ public class SculpturesService
         sculptureToUpdate.CoverImg = sculptureData.CoverImg ?? sculptureToUpdate.CoverImg;
         sculptureToUpdate.Description = sculptureData.Description ?? sculptureToUpdate.Description;
         sculptureToUpdate.Name = sculptureData.Name ?? sculptureToUpdate.Name;
+        sculptureToUpdate.Dimensions = sculptureData.Dimensions ?? sculptureToUpdate.Dimensions;
 
         Sculpture sculpture = _repo.EditSculpture(sculptureToUpdate);
         return sculpture;

@@ -3,7 +3,7 @@
         <router-link :to="`sculpture/${sculpture.id}`" class="h-100 hover">
             <img class="aspect-1-1 img-fluid fit-cover rounded" :src="sculpture.coverImg" :alt="sculpture.name">
             <div class="fw-bold text-shadow text-white cover">
-                <p class="reveal cover-title mb-0 fs-4">{{ sculpture.name }}</p>
+                <p class="reveal cover-title mb-0 fs-4 w-75">{{ sculpture.name }}</p>
                 <p class="reveal cover-year mb-0">{{ sculpture.year }}</p>
             </div>
         </router-link>

@@ -114,3 +114,11 @@ a {
 .ease {
   transition: ease-in-out .5s;
 }
+
+.hidden {
+  display: none;
+}
+
+.fit-contain {
+  object-fit: contain;
+}

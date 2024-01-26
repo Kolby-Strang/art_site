@@ -13,15 +13,10 @@ public class SculpturesService
         _repo = repo;
     }
 
-    internal List<Sculpture> getSmallSculptures()
+    internal List<Sculpture> getSculptures()
     {
-        List<Sculpture> smallSculptures = _repo.getSmallSculptures();
-        return smallSculptures;
-    }
-    internal List<Sculpture> getLargeSculptures()
-    {
-        List<Sculpture> largeSculptures = _repo.getLargeSculptures();
-        return largeSculptures;
+        List<Sculpture> sculptures = _repo.getSculptures();
+        return sculptures;
     }
 
     internal Sculpture CreateSculpture(Sculpture sculptureData, string userId)

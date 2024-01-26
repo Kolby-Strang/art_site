@@ -5,6 +5,9 @@
   <main>
     <router-view />
   </main>
+  <footer>
+    <FooterComponent />
+  </footer>
   <NavOffCanvas />
 </template>
 
@@ -12,6 +15,7 @@
 import { computed } from 'vue'
 import { AppState } from './AppState'
 import Navbar from './components/Navbar.vue'
+import FooterComponent from './components/FooterComponent.vue'
 import NavOffCanvas from './components/NavOffCanvas.vue'
 
 export default {
@@ -20,7 +24,7 @@ export default {
       appState: computed(() => AppState)
     }
   },
-  components: { Navbar, NavOffCanvas }
+  components: { Navbar, NavOffCanvas, FooterComponent }
 }
 </script>
 <style lang="scss">

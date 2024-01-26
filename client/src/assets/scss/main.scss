@@ -71,6 +71,9 @@ a {
   object-fit: cover;
 }
 
+.fs-0 {
+  font-size: 40pt;
+}
 
 .mvh-75 {
   max-height: 75vh;
@@ -90,4 +93,16 @@ a {
 
 .underline {
   text-decoration: underline;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 8px #000000;
+}
+
+.aspect-1-1 {
+  aspect-ratio: 1/1;
+}
+
+.fit-cover {
+  object-fit: cover;
 }

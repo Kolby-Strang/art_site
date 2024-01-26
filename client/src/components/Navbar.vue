@@ -11,8 +11,7 @@
     </div>
     <nav class="d-none d-md-flex text-secondary py-4">
       <a href="#/" class="nav-link">Home</a>
-      <a href="#/larger-sculptures" class="nav-link">Larger Sculptures</a>
-      <a href="#/smaller-sculptures" class="nav-link">Smaller Sculptures</a>
+      <a href="#/sculptures" class="nav-link">Sculptures</a>
       <a href="#/about" class="nav-link">About Me</a>
       <a href="#/artist-statement" class="nav-link">Artist Statement</a>
     </nav>

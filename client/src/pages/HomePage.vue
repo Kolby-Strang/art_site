@@ -51,8 +51,8 @@ export default {
       }
     }
     // LIFECYCLE
-    onMounted(async () => {
-      await getNewestSculpture()
+    onMounted(() => {
+      getNewestSculpture()
     })
     return {
       newestSculpture

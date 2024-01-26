@@ -1,5 +1,8 @@
 <template>
-    <p class="fs-1">Smaller Sculptures</p>
+    <div class="component">
+
+
+    </div>
 </template>
 
 

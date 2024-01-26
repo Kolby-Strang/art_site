@@ -29,9 +29,9 @@ public class SculpturesRepository
     {
         string sql = @"
         INSERT INTO sculptures
-        (name, description, year, price, isLarge, coverImg)
+        (name, description, year, price, isLarge, coverImg, dimensions)
         VALUES
-        (@Name, @Description, @Year, @Price, @IsLarge, @CoverImg);
+        (@Name, @Description, @Year, @Price, @IsLarge, @CoverImg, @Dimensions);
 
         SELECT * FROM sculptures
         WHERE id = LAST_INSERT_ID()
@@ -60,6 +60,7 @@ public class SculpturesRepository
         price = @Price,
         coverImg = @CoverImg,
         description = @Description,
+        dimensions = @Dimensions,
         name = @Name
         WHERE id = @Id;
 

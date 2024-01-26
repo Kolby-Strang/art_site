@@ -29,3 +29,5 @@ FROM sculptures
     JOIN images ON images.sculptureId = sculptures.id;
 
 DELETE FROM images WHERE id = 3;
+
+ALTER TABLE sculptures ADD COLUMN dimensions varchar(20)

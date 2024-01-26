@@ -9,5 +9,6 @@ export class Sculpture {
         this.isLarge = data.isLarge
         this.price = data.price
         this.year = data.year
+        this.dimensions = data.dimensions
     }
 }

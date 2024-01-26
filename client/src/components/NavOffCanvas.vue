@@ -7,8 +7,7 @@
         <div class="offcanvas-body">
             <nav class="text-secondary">
                 <a href="#/" class="nav-link" @click="closeOffCanvas()">Home</a>
-                <a href="#/larger-sculptures" class="nav-link" @click="closeOffCanvas()">Larger Sculptures</a>
-                <a href="#/smaller-sculptures" class="nav-link" @click="closeOffCanvas()">Smaller Sculptures</a>
+                <a href="#/sculptures" class="nav-link" @click="closeOffCanvas()">Sculptures</a>
                 <a href="#/about" class="nav-link" @click="closeOffCanvas()">About Me</a>
                 <a href="#/artist-statement" class="nav-link" @click="closeOffCanvas()">Artist Statement</a>
             </nav>

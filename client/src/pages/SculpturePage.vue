@@ -15,7 +15,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-2 fs-6">
+            <div class="col-12 col-md-2 order-1 order-md-0 fs-6">
                 <p>Made in: {{ sculpture.year }}</p>
                 <p v-if="sculpture.dimensions">{{ sculpture.dimensions }}</p>
                 <div v-if="sculpture.price">
@@ -24,7 +24,7 @@
                 </div>
                 <p v-else>Sculpture is not for sale</p>
             </div>
-            <div class="col-12 col-md-10 border-secondary">
+            <div class="col-12 col-md-10 order-0 order-md-1 border-secondary">
                 <p class="fs-5">{{ sculpture.description }}</p>
             </div>
         </div>

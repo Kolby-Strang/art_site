@@ -15,33 +15,20 @@ public class SculpturesController : ControllerBase
         _imagesService = imagesService;
     }
 
-    [HttpGet("small")]
-    public ActionResult<List<Sculpture>> GetSmallSculptures()
+    [HttpGet]
+    public ActionResult<List<Sculpture>> GetSculptures()
     {
         try
         {
-            List<Sculpture> smallSculptures = _sculpturesService.getSmallSculptures();
-            return Ok(smallSculptures);
+            List<Sculpture> sculptures = _sculpturesService.getSculptures();
+            return Ok(sculptures);
         }
         catch (Exception err)
         {
             return BadRequest(err.Message);
         }
     }
-    [HttpGet("large")]
-    public ActionResult<List<Sculpture>> GetLargeSculptures()
 
-    {
-        try
-        {
-            List<Sculpture> largeSculptures = _sculpturesService.getLargeSculptures();
-            return Ok(largeSculptures);
-        }
-        catch (Exception err)
-        {
-            return BadRequest(err.Message);
-        }
-    }
     [HttpGet("{id}")]
     public ActionResult<Sculpture> GetSculptureById(int id)
     {

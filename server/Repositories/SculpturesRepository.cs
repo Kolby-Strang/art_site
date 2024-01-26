@@ -15,25 +15,14 @@ public class SculpturesRepository
         _db = db;
     }
 
-    internal List<Sculpture> getSmallSculptures()
+    internal List<Sculpture> getSculptures()
     {
         string sql = @"
         SELECT * FROM sculptures
-        WHERE sculptures.isLarge = false
         ;";
 
-        List<Sculpture> smallSculptures = _db.Query<Sculpture>(sql).ToList();
-        return smallSculptures;
-    }
-    internal List<Sculpture> getLargeSculptures()
-    {
-        string sql = @"
-        SELECT * FROM sculptures
-        WHERE sculptures.isLarge = true
-        ;";
-
-        List<Sculpture> largeSculptures = _db.Query<Sculpture>(sql).ToList();
-        return largeSculptures;
+        List<Sculpture> sculptures = _db.Query<Sculpture>(sql).ToList();
+        return sculptures;
     }
 
     internal Sculpture CreateSculpture(Sculpture sculptureData)

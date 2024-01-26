@@ -7,7 +7,7 @@
     <img class="logo my-3" src="https://yzcvxjdmcmvriilyesrf.supabase.co/storage/v1/object/public/images/Gia"
       alt="Photo of Gia">
     <div class="pt-3">
-      <p class="fw-bold text-secondary fs-1 text-center mb-0">GIA FULLERTON STRANG</p>
+      <p class="fw-bold text-secondary fs-1 text-center mb-2">GIA FULLERTON STRANG</p>
     </div>
     <nav class="d-none d-md-flex text-secondary py-4">
       <a href="#/" class="nav-link">Home</a>

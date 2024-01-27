@@ -20,6 +20,9 @@
                         </div>
                     </div>
                 </div>
+                <!-- Default If no Image Data -->
+                <img v-else class="fit-contain mvh-100 w-100 rounded" :src="sculpture.coverImg"
+                    :alt="`Picture of ${sculpture.name}`">
                 <!-- Mini Image Nav -->
                 <div v-if="images.length > 1" class="mini-img-container">
                     <div v-for="(image, index) in images" :key="image.id">
@@ -28,9 +31,6 @@
                             class="mini-img" :src="image.imageUrl" :alt="`Picture of ${sculpture.name}`">
                     </div>
                 </div>
-                <!-- Default If no Image Data -->
-                <img v-else class="fit-contain mvh-100 w-100 rounded" :src="sculpture.coverImg"
-                    :alt="`Picture of ${sculpture.name}`">
             </div>
             <!-- Image Info -->
             <div class="col-12 col-md-2 order-1 order-md-0 fs-6">

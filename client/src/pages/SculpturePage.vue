@@ -4,11 +4,13 @@
             <div class="col-12 mb-3 d-flex flex-column align-items-center">
                 <p class="fs-1 text-center">{{ sculpture.name }}</p>
                 <div v-if="images.length > 0" class="position-relative">
+                    <!-- Image Content -->
                     <div v-for="(image, index) in images" :key="image.id">
                         <img :class="index == currentImgIndex ? 'd-block' : 'hidden'"
                             class="fit-contain mvh-100 w-100 rounded" :src="image.imageUrl"
                             :alt="`Picture of ${sculpture.name}`">
                     </div>
+                    <!-- Default Image Nav -->
                     <div v-if="images.length > 1" class="scroll-container fs-1 text-shadow">
                         <div @click="scrollImg(-1)" role="button" class="justify-content-start">
                             <i class="mdi mdi-hand-pointing-left"></i>
@@ -18,7 +20,19 @@
                         </div>
                     </div>
                 </div>
+                <!-- Mini Image Nav -->
+                <div v-if="images.length > 1" class="mini-img-container">
+                    <div v-for="(image, index) in images" :key="image.id">
+                        <img role="button" @click="setImg(index)"
+                            :class="index == currentImgIndex ? 'border-secondary box-shadow' : 'border-primary'"
+                            class="mini-img" :src="image.imageUrl" :alt="`Picture of ${sculpture.name}`">
+                    </div>
+                </div>
+                <!-- Default If no Image Data -->
+                <img v-else class="fit-contain mvh-100 w-100 rounded" :src="sculpture.coverImg"
+                    :alt="`Picture of ${sculpture.name}`">
             </div>
+            <!-- Image Info -->
             <div class="col-12 col-md-2 order-1 order-md-0 fs-6">
                 <p>Made in: {{ sculpture.year }}</p>
                 <p v-if="sculpture.dimensions">{{ sculpture.dimensions }}</p>
@@ -75,12 +89,15 @@ export default {
                 currentImgIndex.value = 0
             }
         }
+        function setImg(index) {
+            currentImgIndex.value = index
+        }
         // LIFECYCLE
         onMounted(() => {
             getThisSculpture()
             getThisImages()
         })
-        return { sculpture, images, currentImgIndex, scrollImg }
+        return { sculpture, images, currentImgIndex, scrollImg, setImg }
     }
 };
 </script>
@@ -107,5 +124,32 @@ export default {
     padding: 0 .5em 0 .5em;
     width: 100%;
     height: 100%;
+}
+
+.mini-img {
+    transition: ease-in-out .2s;
+    max-width: 10vh;
+    border: solid 4px;
+    border-radius: 7px;
+    aspect-ratio: 1/1;
+    margin: .5em;
+}
+
+.mini-img-container {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    overflow-x: scroll;
+    max-width: 100vw;
+}
+
+.mini-img-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+.mini-img-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 </style>

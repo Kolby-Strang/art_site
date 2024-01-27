@@ -33,6 +33,11 @@ const routes = [
     component: loadPage('ArtistStatementPage')
   },
   {
+    path: '/contact',
+    name: 'Contact',
+    component: loadPage('ContactPage')
+  },
+  {
     path: '/sculpture/:id',
     name: 'Sculpture',
     component: loadPage('SculpturePage')

@@ -10,6 +10,7 @@
                 <a href="#/sculptures" class="nav-link" @click="closeOffCanvas()">Sculptures</a>
                 <a href="#/about" class="nav-link" @click="closeOffCanvas()">About Me</a>
                 <a href="#/artist-statement" class="nav-link" @click="closeOffCanvas()">Artist Statement</a>
+                <a href="#/contact" class="nav-link" @click="closeOffCanvas()">Contact Me</a>
             </nav>
         </div>
     </div>

@@ -6,7 +6,7 @@
                     Artist Statement
                 </p>
             </div>
-            <div class="col-12">
+            <div class="col-12 col-sm-6 mb-4 order-0 order-sm-0">
                 <p>
                     The human experience relies on developing relationships and connection with others. These things,
                     although not physically tangible, evolve in the spaces within and between two individuals. These spaces
@@ -15,6 +15,17 @@
                     repetition of
                     geometric form.
                 </p>
+            </div>
+            <div class="col-12 col-sm-6 mb-4 order-1 order-sm-1 d-flex justify-content-center">
+                <img class="img-fluid mvh-50 rounded border-secondary"
+                    src="https://yzcvxjdmcmvriilyesrf.supabase.co/storage/v1/object/public/images/the-ties-that-bind/0"
+                    alt="">
+            </div>
+            <div class="col-12 col-sm-6 mb-4 order-3 order-sm-2 d-flex justify-content-center">
+                <img class="img-fluid mvh-50 rounded border-secondary"
+                    src="https://yzcvxjdmcmvriilyesrf.supabase.co/storage/v1/object/public/images/chaos-contained/0" alt="">
+            </div>
+            <div class="col-12 col-sm-6 mb-4 order-2 order-sm-3">
                 <p>
                     Choosing to work in salvaged steel, I am drawn to its materiality. It has a nature of permanence and
                     weight that
@@ -39,4 +50,8 @@ export default {
 </script>
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.border-secondary {
+    border: solid 1px;
+}
+</style>

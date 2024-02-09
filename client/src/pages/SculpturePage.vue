@@ -2,7 +2,22 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 mb-3 d-flex flex-column align-items-center">
-                <p class="fs-1 text-center">{{ sculpture.name }}</p>
+                <div class="d-flex justify-content-center align-items-center">
+                    <p class="fs-1 text-center mb-0">{{ sculpture.name }}</p>
+                    <div class="dropdown">
+                        <button v-if="account.id == adminId" class="btn btn-secondary p-0 px-1 mx-2" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="mdi mdi-dots-horizontal"></i>
+
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#this-thang">Edit
+                                    Sculpture</button></li>
+                            <li><button class="dropdown-item">Add Photo</button></li>
+                            <li><button class="dropdown-item">Delete</button></li>
+                        </ul>
+                    </div>
+                </div>
                 <div v-if="images.length > 0" class="position-relative">
                     <!-- Image Content -->
                     <div v-for="(image, index) in images" :key="image.id">
@@ -39,21 +54,23 @@
                 </div>
                 <p v-else>Sculpture is not for sale</p>
             </div>
-            <div class="col-12 col-md-10 order-0 order-md-1 border-secondary">
+            <div v-if="false" class="col-12 col-md-10 order-0 order-md-1 border-secondary">
                 <p class="fs-5">{{ sculpture.description }}</p>
             </div>
         </div>
     </div>
+    <BasicModal _id="this-thang">Yuh</BasicModal>
 </template>
 
 
 <script>
-import { onMounted, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 import Pop from '../utils/Pop';
 import { sculpturesService } from '../services/SculpturesService';
 import { imagesService } from '../services/ImagesService';
 import { useRoute } from 'vue-router';
-import { logger } from '../utils/Logger';
+import { AppState } from '../AppState';
+import BasicModal from '../components/modals/BasicModal.vue'
 
 export default {
     setup() {
@@ -62,6 +79,8 @@ export default {
         const images = ref([])
         const currentImgIndex = ref(0)
         const route = useRoute()
+        const account = computed(() => AppState.account)
+        const adminId = computed(() => AppState.adminId)
         // FUNCTIONS
         async function getThisSculpture() {
             try {
@@ -98,8 +117,9 @@ export default {
             getThisSculpture()
             getThisImages()
         })
-        return { sculpture, images, currentImgIndex, scrollImg, setImg }
-    }
+        return { sculpture, images, currentImgIndex, scrollImg, setImg, account, adminId }
+    },
+    components: { BasicModal }
 };
 </script>
 

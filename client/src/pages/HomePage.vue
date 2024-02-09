@@ -31,14 +31,14 @@
     </div>
     <div v-if="newestSculpture.id" class="row bg-grey">
       <p class="fs-1">Check out my newest sculpture!</p>
-      <div class="col-12 col-md-6 text-center">
+      <div class="col-12 text-center" :class="false ? 'col-md-6' : ''">
         <p class="fs-2 text-secondary mb-0">{{ newestSculpture.name }}</p>
         <router-link :to="`sculpture/${newestSculpture.id}`">
           <img class="img-fluid rounded selectable" :src="newestSculpture.coverImg"
             :alt="'Photo of ' + newestSculpture.name">
         </router-link>
       </div>
-      <div class="col-12 col-md-6">
+      <div v-if="false" class="col-12 col-md-6">
         <p class="fs-5">{{ newestSculpture.description }}</p>
       </div>
     </div>

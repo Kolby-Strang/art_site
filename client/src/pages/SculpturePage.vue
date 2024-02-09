@@ -20,9 +20,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Default If no Image Data -->
-                <img v-else class="fit-contain mvh-100 w-100 rounded" :src="sculpture.coverImg"
-                    :alt="`Picture of ${sculpture.name}`">
                 <!-- Mini Image Nav -->
                 <div v-if="images.length > 1" class="mini-img-container">
                     <div v-for="(image, index) in images" :key="image.id">
@@ -69,13 +66,17 @@ export default {
         async function getThisSculpture() {
             try {
                 sculpture.value = await sculpturesService.getSculptureById(route.params.id)
+                images.value.unshift({ imageUrl: sculpture.value.coverImg })
             } catch (err) {
                 Pop.error(err)
             }
         }
         async function getThisImages() {
             try {
-                images.value = await imagesService.getImagesBySculptureId(route.params.id)
+                const res = await imagesService.getImagesBySculptureId(route.params.id)
+                res.forEach((image) => {
+                    images.value.push(image)
+                });
             } catch (err) {
                 Pop.error(err)
             }

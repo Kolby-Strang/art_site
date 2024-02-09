@@ -1,8 +1,8 @@
 <template>
     <div class="container-fluid border-secondary px-0 position-relative">
         <router-link :to="`sculpture/${sculpture.id}`" class="h-100 hover">
-            <img class="aspect-1-1 img-fluid fit-cover rounded" :src="`${sculpture.coverImg}?width=300`"
-                :alt="sculpture.name">
+            <FastImage :_id="sculpture.id" :_class="'aspect-1-1 img-fluid fit-cover w-100 h-100 rounded'"
+                :_src="sculpture.coverImg" :_alt="sculpture.name"></FastImage>
             <div class="fw-bold text-shadow text-white cover">
                 <p class="reveal cover-title mb-0 fs-4 w-75">{{ sculpture.name }}</p>
                 <p class="reveal cover-year mb-0">{{ sculpture.year }}</p>
@@ -14,6 +14,7 @@
 
 <script>
 import { Sculpture } from '../models/Sculpture';
+import FastImage from './FastImage.vue';
 
 export default {
     props: {
@@ -21,7 +22,8 @@ export default {
     },
     setup() {
         return {}
-    }
+    },
+    components: { FastImage }
 };
 </script>
 

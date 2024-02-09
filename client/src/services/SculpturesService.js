@@ -11,7 +11,8 @@ class SculpturesService {
     }
     async getAllSculptures() {
         const res = await api.get('api/sculptures')
-        return res.data.map((pojo) => new Sculpture(pojo))
+        let sculptures = res.data.map((pojo) => new Sculpture(pojo))
+        return sculptures.reverse()
     }
     async getSculptureById(id) {
         const res = await api.get(`api/sculptures/${id}`)

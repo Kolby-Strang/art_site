@@ -2,9 +2,9 @@
   <div class="container-fluid">
     <div id="hero" class="row px-0 py-0">
       <div class="col-12 px-0">
-        <img class="hero-img"
-          src="https://yzcvxjdmcmvriilyesrf.supabase.co/storage/v1/object/public/images/within-the-hearts-of-humankind/1"
-          alt="Gia Standing within wings made of knives">
+        <FastImage _class="hero-img"
+          _src="https://yzcvxjdmcmvriilyesrf.supabase.co/storage/v1/object/public/images/within-the-hearts-of-humankind/1"
+          _alt="Gia Standing within wings made of knives" />
       </div>
     </div>
     <div class="row">
@@ -34,8 +34,8 @@
       <div class="col-12 text-center" :class="false ? 'col-md-6' : ''">
         <p class="fs-2 text-secondary mb-0">{{ newestSculpture.name }}</p>
         <router-link :to="`sculpture/${newestSculpture.id}`">
-          <img class="img-fluid rounded selectable" :src="newestSculpture.coverImg"
-            :alt="'Photo of ' + newestSculpture.name">
+          <FastImage _class="img-fluid rounded selectable" :_src="newestSculpture.coverImg"
+            :_alt="'Photo of ' + newestSculpture.name" />
         </router-link>
       </div>
       <div v-if="false" class="col-12 col-md-6">
@@ -51,6 +51,7 @@ import { onMounted, ref } from 'vue'
 import Pop from '../utils/Pop'
 import { sculpturesService } from '../services/SculpturesService.js'
 import Loader from '../components/Loader.vue'
+import FastImage from '../components/FastImage.vue'
 
 export default {
   setup() {
@@ -73,11 +74,11 @@ export default {
       newestSculpture
     };
   },
-  components: { Loader }
+  components: { Loader, FastImage }
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .hero-img {
   aspect-ratio: 16/7;
   object-fit: cover;

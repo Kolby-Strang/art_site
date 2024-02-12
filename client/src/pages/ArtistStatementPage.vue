@@ -17,13 +17,14 @@
                 </p>
             </div>
             <div class="col-12 col-sm-6 mb-4 order-1 order-sm-1 d-flex justify-content-center">
-                <img class="img-fluid mvh-50 rounded border-secondary"
-                    src="https://yzcvxjdmcmvriilyesrf.supabase.co/storage/v1/object/public/images/the-ties-that-bind/0"
-                    alt="">
+                <FastImage _class="img-fluid mvh-50 rounded border-secondary"
+                    _src="https://yzcvxjdmcmvriilyesrf.supabase.co/storage/v1/object/public/images/the-ties-that-bind/0"
+                    _alt="sculpture: The ties that bind" />
             </div>
             <div class="col-12 col-sm-6 mb-4 order-3 order-sm-2 d-flex justify-content-center">
-                <img class="img-fluid mvh-50 rounded border-secondary"
-                    src="https://yzcvxjdmcmvriilyesrf.supabase.co/storage/v1/object/public/images/chaos-contained/0" alt="">
+                <FastImage _class="img-fluid mvh-50 rounded border-secondary"
+                    _src="https://yzcvxjdmcmvriilyesrf.supabase.co/storage/v1/object/public/images/chaos-contained/0"
+                    _alt="Sculpture: Chaos Contained" />
             </div>
             <div class="col-12 col-sm-6 mb-4 order-2 order-sm-3">
                 <p>
@@ -42,10 +43,13 @@
 
 
 <script>
+import FastImage from '../components/FastImage.vue';
+
 export default {
     setup() {
-        return {}
-    }
+        return {};
+    },
+    components: { FastImage }
 };
 </script>
 

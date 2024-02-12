@@ -11,7 +11,7 @@
 
             <a class="fs-5 btn btn-secondary text-white" href="#/contact">Contact me!</a>
 
-            <i class="mdi mdi-copyright">Giazilla</i>
+            <i class="mdi di-copyright">Giazilla</i>
         </div>
         <div class="d-flex align-items-center">
             <p class="mb-0">

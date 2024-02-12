@@ -10,6 +10,7 @@
                 <SculptureCard :sculpture="sculpture" />
             </div>
         </div>
+        <Loader v-else />
     </div>
 </template>
 
@@ -19,6 +20,7 @@ import { onMounted, ref } from 'vue';
 import Pop from '../utils/Pop';
 import { sculpturesService } from '../services/SculpturesService';
 import SculptureCard from '../components/SculptureCard.vue'
+import Loader from '../components/Loader.vue'
 
 export default {
     setup() {
@@ -38,7 +40,7 @@ export default {
         })
         return { sculptures }
     },
-    components: { SculptureCard }
+    components: { SculptureCard, Loader }
 };
 </script>
 

@@ -42,6 +42,7 @@
         <p class="fs-5">{{ newestSculpture.description }}</p>
       </div>
     </div>
+    <Loader v-else />
   </div>
 </template>
 
@@ -49,27 +50,30 @@
 import { onMounted, ref } from 'vue'
 import Pop from '../utils/Pop'
 import { sculpturesService } from '../services/SculpturesService.js'
+import Loader from '../components/Loader.vue'
 
 export default {
   setup() {
     // VARIABLES
-    let newestSculpture = ref({})
+    let newestSculpture = ref({});
     // FUNCTIONS
     async function getNewestSculpture() {
       try {
-        newestSculpture.value = await sculpturesService.getNewestSculpture()
-      } catch (err) {
-        Pop.error(err)
+        newestSculpture.value = await sculpturesService.getNewestSculpture();
+      }
+      catch (err) {
+        Pop.error(err);
       }
     }
     // LIFECYCLE
     onMounted(() => {
-      getNewestSculpture()
-    })
+      getNewestSculpture();
+    });
     return {
       newestSculpture
-    }
-  }
+    };
+  },
+  components: { Loader }
 }
 </script>
 

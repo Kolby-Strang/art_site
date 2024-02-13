@@ -37,10 +37,3 @@ export default {
     }
 };
 </script>
-
-
-<style lang="scss" scoped>
-.mdi-instagram {
-    color: #e6683c;
-}
-</style>

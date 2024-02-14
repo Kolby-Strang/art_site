@@ -9,9 +9,9 @@
                 </button>
             </div>
 
-            <a class="fs-5 btn btn-secondary text-white" href="#/contact">Contact me!</a>
+            <a class="fs-5 btn btn-primary text-dark" href="#/contact">Contact me!</a>
 
-            <i class="mdi di-copyright">Giazilla</i>
+            <i class="mdi di-copyright text-white">Giazilla</i>
         </div>
         <div class="d-flex align-items-center">
             <p class="mb-0">

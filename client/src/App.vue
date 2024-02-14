@@ -5,7 +5,7 @@
   <main>
     <router-view />
   </main>
-  <footer class="bg-primary">
+  <footer class="bg-secondary">
     <FooterComponent />
   </footer>
   <NavOffCanvas />

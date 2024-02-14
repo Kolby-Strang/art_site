@@ -5,12 +5,12 @@
 
 
 <script>
-import { logger } from '../utils/Logger';
+import { onMounted } from 'vue';
 
 
 export default {
     props: {
-        _id: { required: true },
+        _id: { default: () => Math.floor(Math.random() * 10000) + '-' + Math.floor(Math.random() * 10000) },
         _src: { type: String, required: true },
         _alt: { type: String, required: true },
         _class: { type: String, required: false }

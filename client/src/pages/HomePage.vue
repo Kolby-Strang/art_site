@@ -3,7 +3,7 @@
     <div id="hero" class="row px-0 py-0">
       <div class="col-12 px-0">
         <FastImage _class="hero-img"
-          _src="https://yzcvxjdmcmvriilyesrf.supabase.co/storage/v1/object/public/images/within-the-hearts-of-humankind/1"
+          _src="https://photos.strangkolby.com/art-site/within-the-hearts-of-humankind/1.jpeg"
           _alt="Gia Standing within wings made of knives" />
       </div>
     </div>
@@ -26,7 +26,7 @@
       </div>
       <div class="col-12 col-md-6 d-flex justify-content-center">
         <img class="img-fluid object-cover rounded"
-          src="https://yzcvxjdmcmvriilyesrf.supabase.co/storage/v1/object/public/images/Gia" alt="A photo of Gia">
+          src="https://photos.strangkolby.com/art-site/Gia.jpg" alt="A photo of Gia">
       </div>
     </div>
     <div v-if="newestSculpture.id" class="row bg-grey">

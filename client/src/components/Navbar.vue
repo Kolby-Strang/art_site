@@ -4,7 +4,7 @@
       data-bs-target="#navOffCanvas" aria-controls="navOffCanvas">
       <i class="fs-1 mdi mdi-menu"></i>
     </button>
-    <img class="logo my-3" src="https://yzcvxjdmcmvriilyesrf.supabase.co/storage/v1/object/public/images/Gia"
+    <img class="logo my-3" src="https://photos.strangkolby.com/art-site/Gia.jpg"
       alt="Photo of Gia">
     <div class="pt-3">
       <p class="fw-bold text-secondary fs-1 text-center mb-2">GIA FULLERTON STRANG</p>

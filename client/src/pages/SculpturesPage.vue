@@ -47,7 +47,7 @@ export default {
 
 <style lang="scss" scoped>
 .bg-moon-gate {
-    background-image: url(https://yzcvxjdmcmvriilyesrf.supabase.co/storage/v1/object/public/images/zmoongate/0);
+    background-image: url(https://photos.strangkolby.com/art-site/zmoongate/0.jpeg);
     background-position: center;
     background-size: cover;
 }

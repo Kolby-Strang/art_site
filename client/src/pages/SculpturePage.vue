@@ -52,8 +52,7 @@
                     <button class="btn btn-secondary">${{ sculpture.price }}</button>
                     <p class="fs-7">*Contact me if you're interested in purchasing!</p>
                 </div>
-                <p v-else-if="sculpture.price == 69">Sold</p>
-                <p v-else>Sculpture is not for sale</p>
+                <p v-else>Sold</p>
             </div>
             <div v-if="true" class="col-12 col-md-10 order-0 order-md-1 border-secondary">
                 <p class="fs-5">{{ sculpture.description }}</p>

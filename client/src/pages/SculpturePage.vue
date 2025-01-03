@@ -48,7 +48,7 @@
             <div class="col-12 col-md-2 order-1 order-md-0 fs-6">
                 <p>Made in: {{ sculpture.year }}</p>
                 <p v-if="sculpture.dimensions">{{ sculpture.dimensions }}</p>
-                <p v-if="sculpture.price == 69">These pieces are available at Idaho Art Gallery with this link to their website, www.idahoartgallery.com</p>
+                <p v-if="sculpture.price == 69">This piece is available at Idaho Art Gallery with this link to their website, <a>www.idahoartgallery.com</a></p>
                 <div v-else-if="sculpture.price">
                     <button class="btn btn-secondary">${{ sculpture.price }}</button>
                     <p class="fs-7">*Contact me if you're interested in purchasing!</p>

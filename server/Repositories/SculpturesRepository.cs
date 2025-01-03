@@ -19,6 +19,7 @@ public class SculpturesRepository
     {
         string sql = @"
         SELECT * FROM sculptures
+        ORDER BY order
         ;";
 
         List<Sculpture> sculptures = _db.Query<Sculpture>(sql).ToList();
